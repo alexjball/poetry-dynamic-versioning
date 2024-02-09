@@ -1,0 +1,16 @@
+[tool.poetry]
+authors     = []
+description = ""
+name        = "lib-a"
+version     = "0.0.0"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry-dynamic-versioning]
+enable  = true
+pattern = "^lib-a@(?P<base>\\d+\\.\\d+\\.\\d+)"
+
+[build-system]
+build-backend = "poetry_dynamic_versioning.backend"
+requires      = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
